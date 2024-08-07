@@ -48,7 +48,7 @@ window.onload = function () {
 
 	//load images
 	doodlerRightImg = new Image();
-	doodlerRightImg.src = "./doodler-right.png";
+	doodlerRightImg.src = "/Doodle-Jump/Media & Images/doodler-right.png";
 	doodler.img = doodlerRightImg;
 	doodlerRightImg.onload = function () {
 		context.drawImage(
@@ -61,10 +61,10 @@ window.onload = function () {
 	};
 
 	doodlerLeftImg = new Image();
-	doodlerLeftImg.src = "./doodler-left.png";
+	doodlerLeftImg.src = "/Doodle-Jump/Media & Images/doodler-left.png";
 
 	platformImg = new Image();
-	platformImg.src = "./platform.png";
+	platformImg.src = "/Doodle-Jump/Media & Images/platform.png";
 
 	velocityY = initialVelocityY;
 	placePlatforms();
