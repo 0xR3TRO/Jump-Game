@@ -43,7 +43,7 @@ window.onload = function () {
 	context = board.getContext("2d"); //used for drawing on the board
 
 	doodlerRightImg = new Image();
-	doodlerRightImg.src = "./doodler-right.png";
+	doodlerRightImg.src = "/Gofur-Jump/Media & Images/doodler-right.png";
 	doodler.img = doodlerRightImg;
 	doodlerRightImg.onload = function () {
 		context.drawImage(
@@ -56,10 +56,10 @@ window.onload = function () {
 	};
 
 	doodlerLeftImg = new Image();
-	doodlerLeftImg.src = "./doodler-left.png";
+	doodlerLeftImg.src = "/Gofur-Jump/Media & Images/doodler-left.png";
 
 	platformImg = new Image();
-	platformImg.src = "./platform.png";
+	platformImg.src = "/Gofur-Jump/Media & Images/platform.png";
 
 	velocityY = initialVelocityY;
 	placePlatforms();
