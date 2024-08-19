@@ -1,8 +1,40 @@
 body {
-	text-align: center;
+	background-color: #000;
+	color: #fff;
+	font-family: "Press Start 2P", cursive; /* Font w stylu retro */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+}
+
+#gameContainer {
+	border: 10px solid #00ff00; /* Zielone obramowanie w stylu retro */
+	padding: 20px;
+	background-color: #222;
+	box-shadow: 0px 0px 20px #00ff00; /* Neonowy efekt */
+	border-radius: 20px;
 }
 
 #board {
-	/* background-color: green; */
-	background-image: url("/Doodle-Jump/Media\ &\ Images/doodlejumpbg.png");
+	background-image: url("/Doodle-Jump/Media & Images/doodlejumpbg.png");
+	background-size: cover;
+	width: 320px; /* Typowe wymiary gry w stylu retro */
+	height: 480px;
+}
+
+/* Animacja do tła */
+@keyframes backgroundScroll {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 0 100%;
+	}
+}
+
+#board {
+	animation: backgroundScroll 10s linear infinite;
 }
