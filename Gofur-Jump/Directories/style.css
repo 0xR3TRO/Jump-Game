@@ -1,8 +1,57 @@
 body {
-	text-align: center;
+	background-color: #001f3f; /* Ciemnoniebieskie tło */
+	color: #fff;
+	font-family: "Press Start 2P", cursive; /* Font w stylu retro */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+}
+
+#gameContainer {
+	border: 10px solid #007bff; /* Niebieskie obramowanie */
+	padding: 20px;
+	background-color: #00274d;
+	box-shadow: 0px 0px 20px #007bff; /* Neonowy niebieski efekt */
+	border-radius: 20px;
 }
 
 #board {
 	background-color: #9945ff;
-	background-image: url("/Gofur-Jump/Media\ &\ Images/doodlejumpbg.png");
+	background-image: url("/Gofur-Jump/Media & Images/doodlejumpbg.png");
+	background-size: cover;
+	width: 320px;
+	height: 480px;
+	border: 2px solid #00aaff; /* Obramowanie niebieskie na płótnie */
+}
+
+/* Niebieski efekt migotania */
+@keyframes blueGlow {
+	0%,
+	100% {
+		box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff, 0 0 30px #00aaff;
+	}
+	50% {
+		box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff, 0 0 60px #00ccff;
+	}
+}
+
+#gameContainer {
+	animation: blueGlow 2s infinite alternate;
+}
+
+/* Animacja do tła */
+@keyframes backgroundScroll {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 0 100%;
+	}
+}
+
+#board {
+	animation: backgroundScroll 8s linear infinite;
 }
